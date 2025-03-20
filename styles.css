@@ -1,0 +1,64 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  /* Containers */
+  #gif-container,
+  #image-container {
+    position: absolute; /* Make containers overlap */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the containers */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+  
+  /* Show GIF by default */
+  #gif-container {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* GIF Styling */
+  #gif {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  /* Image Container Styling */
+  #image-container {
+    background-color: #fff; /* White background for images */
+  }
+  
+  /* Event Image Styling */
+  #event-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    /* Adjust for smaller screens */
+    #gif-container,
+    #image-container {
+      width: 100vw; /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+    }
+  }
